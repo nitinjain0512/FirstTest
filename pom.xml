@@ -12,6 +12,32 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+          <build>
+  <!-- [START resources] -->
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+    <!-- [END resources] -->
+    <plugins>
+      <plugin>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>jetty-maven-plugin</artifactId>
+    <version>9.4.0.M0</version>
+</plugin>
+<plugin>
+  <groupId>org.eclipse.jetty</groupId>
+  <artifactId>jetty-maven-plugin</artifactId>
+  <version>9.4.2.v20170220</version>
+</plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.1</version>
+      </plugin>
+    </plugins>
+  </build>
    <dependencies>
             <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-maven-plugin -->
         <dependency>
