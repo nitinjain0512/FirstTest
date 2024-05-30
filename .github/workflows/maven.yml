@@ -25,7 +25,7 @@ jobs:
       with:
         project_id: 'logical-zephyr-423609-u7'
         workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
-        service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}'
+        service_account: 'svc-uat1@logical-zephyr-423609-u7.iam.gserviceaccount.com'
     
     
     - uses: actions/checkout@v4
