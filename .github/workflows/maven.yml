@@ -24,9 +24,17 @@ jobs:
       uses: 'google-github-actions/auth@v1'
       with:
         project_id: 'logical-zephyr-423609-u7'
+        workload_identity_provider: ${{ secrets.DEFAULT_WIF_PROVIDER  }}
         service_account: 'svc-uat1@logical-zephyr-423609-u7.iam.gserviceaccount.com'
     
-    
+    - id: secrets
+      name: Pull Secrets
+      uses: google-github-actions/get-secretmanager-secrets@v1
+      with:
+         secrets: |-
+          artifactory_releaser_username:lzf-dbc-dev-172052-1-001-cb50/ARTIFACTORY_DEVELOPER_USERNAME
+          artifactory_releaser_password:lzf-dbc-dev-172052-1-001-cb50/ARTIFACTORY_DEVELOPER_PASSWORD
+           
     - uses: actions/checkout@v4
     - name: Set up JDK 17
       uses: actions/setup-java@v3
