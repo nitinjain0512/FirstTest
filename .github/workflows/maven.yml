@@ -69,7 +69,7 @@ jobs:
 
     - name: Configure Docker Client
       run: |-
-       gcloud auth configure-docker --platform managed --region us-central1 --allow-unauthenticated
+       gcloud auth configure-docker
     
     - name: Push Docker Image to Container Registery
       env:
