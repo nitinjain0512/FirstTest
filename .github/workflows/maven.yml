@@ -25,13 +25,13 @@ jobs:
      contents: read
     
     steps:
-    - name: 'Google auth'
-      uses: 'google-github-actions/auth@v1'
-      with:
-        project_id: 'logical-zephyr-423609-u7'
-        workload_identity_provider: "projects/30728498820/locations/global/workloadIdentityPools/github-actions-pool/providers/github-actions"
-        create_credentials_file: true
-        service_account: "svc-uat1@logical-zephyr-423609-u7.iam.gserviceaccount.com"
+    #- name: 'Google auth'
+     # uses: 'google-github-actions/auth@v1'
+      #with:
+       # project_id: 'logical-zephyr-423609-u7'
+        #workload_identity_provider: "projects/30728498820/locations/global/workloadIdentityPools/github-actions-pool/providers/github-actions"
+        #create_credentials_file: true
+        #service_account: "svc-uat1@logical-zephyr-423609-u7.iam.gserviceaccount.com"
         #token_format: "access_token"
         #access_token_lifetime: "120s"
         
