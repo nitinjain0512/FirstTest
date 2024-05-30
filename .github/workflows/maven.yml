@@ -69,5 +69,5 @@ jobs:
 
     - name: Configure Docker Client
       run: |-
-       gcloud auth configure-docker --quite
+       gcloud auth configure-docker --quiet
     
