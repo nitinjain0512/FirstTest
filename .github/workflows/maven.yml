@@ -69,14 +69,15 @@ jobs:
 
     - name: Configure Docker Client
       run: |-
-       gcloud auth configure-docker --quiet
+       gcloud auth configure-docker --platform managed --region us-central1 --allow-unauthenticated
     
     - name: Push Docker Image to Container Registery
       env:
        GIT_TAG: v0.1.0
       run: |-
-       docker tag $IMAGE_NAME:latest gcr.io/logical-zephyr-423609-u7/$IMAGE_NAME:latest
+       docker tag $IMAGE_NAME:latest gcr.io/logical-zephyr-423609-u7/$IMAGE_NAME:latest 
        docker tag $IMAGE_NAME:latest gcr.io/logical-zephyr-423609-u7/$IMAGE_NAME:$GIT_TAG
        docker push gcr.io/logical-zephyr-423609-u7/$IMAGE_NAME:latest
        docker push gcr.io/logical-zephyr-423609-u7/$IMAGE_NAME:$GIT_TAG
+
        
