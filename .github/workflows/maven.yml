@@ -54,5 +54,5 @@ jobs:
        path: staging
 
     - name: Build Docker Image
-      run: docker build -t $IMAGE_NAME:latest .
+      run: docker build -t $IMAGE_NAME .
     
