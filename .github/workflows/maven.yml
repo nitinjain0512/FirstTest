@@ -24,7 +24,6 @@ jobs:
       uses: 'google-github-actions/auth@v1'
       with:
         project_id: 'logical-zephyr-423609-u7'
-        workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
         service_account: 'svc-uat1@logical-zephyr-423609-u7.iam.gserviceaccount.com'
     
     
