@@ -48,7 +48,7 @@ jobs:
        mkdir staging && cp target/*.jar staging
 
     - name: Persist worflow data as artifact
-      uses: actions/upload-artifacts@v2
+      uses: actions/upload-artifact@v2
       with:
        name: github-actions-artifact
        path: staging
