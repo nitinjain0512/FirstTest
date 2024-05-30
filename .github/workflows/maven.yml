@@ -53,6 +53,6 @@ jobs:
        name: github-actions-artifact
        path: staging
 
-    - name: Build Docket Image
-      run: docker build -t $IMAGE_NAME:latest  
+    - name: Build Docker Image
+      run: docker build -t $IMAGE_NAME:latest .
     
