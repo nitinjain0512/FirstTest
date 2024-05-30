@@ -23,8 +23,10 @@ jobs:
     - name: 'Google auth'
       uses: 'google-github-actions/auth@v1'
       with:
+        project_id: 'logical-zephyr-423609-u7'
         workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
         service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}'
+    
     
     - uses: actions/checkout@v4
     - name: Set up JDK 17
