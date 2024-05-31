@@ -65,6 +65,9 @@ jobs:
        name: github-actions-artifact
        path: staging
 
+    - name: 'Use gcloud CLI'
+      run: 'gcloud info'
+      
     - name: Build Docker Image
       run: docker build -t $IMAGE_NAME:latest .
 
