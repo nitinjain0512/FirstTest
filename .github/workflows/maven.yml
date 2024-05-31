@@ -46,12 +46,12 @@ jobs:
         token_format: access_token
         access_token_lifetime: "120s"
 
-    - name: Login to GAR
-      uses: docker/login-action@v3
-      with:
-        registry: us-docker.pkg.dev
-        username: oauth2accesstoken
-        password: ${{ steps.auth.access_token }}
+   # - name: Login to GAR
+    #  uses: docker/login-action@v3
+     # with:
+      #  registry: us-docker.pkg.dev
+       # username: oauth2accesstoken
+        #password: ${{ steps.auth.outputs.access_token }}
         
     - uses: actions/checkout@v4
     - name: Set up JDK 17
@@ -109,7 +109,7 @@ jobs:
       env:
        GIT_TAG: v0.1.0
       run: |-
-       docker tag $IMAGE_NAME:latest us-docker.pkg.dev/logical-zephyr-423609-u7/$IMAGE_NAME:latest 
-       docker tag $IMAGE_NAME:latest us-docker.pkg.dev/logical-zephyr-423609-u7/$IMAGE_NAME:$GIT_TAG
-       docker push us-docker.pkg.dev/logical-zephyr-423609-u7/$IMAGE_NAME:latest
-       docker push us-docker.pkg.dev/logical-zephyr-423609-u7/$IMAGE_NAME:$GIT_TAG
+       docker tag $IMAGE_NAME:latest images/logical-zephyr-423609-u7/$IMAGE_NAME:latest 
+       docker tag $IMAGE_NAME:latest images/logical-zephyr-423609-u7/$IMAGE_NAME:$GIT_TAG
+       docker push images/logical-zephyr-423609-u7/$IMAGE_NAME:latest
+       docker push images/logical-zephyr-423609-u7/$IMAGE_NAME:$GIT_TAG
