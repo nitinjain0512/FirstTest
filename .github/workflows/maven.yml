@@ -42,9 +42,8 @@ jobs:
         service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY_NEW }}
         project_id: 'logical-zephyr-423609-u7'
         export_default_credentials: true
-        
-        #token_format: "access_token"
-        #access_token_lifetime: "120s"
+        token_format: access_token
+        access_token_lifetime: "120s"
          
     - uses: actions/checkout@v4
     - name: Set up JDK 17
