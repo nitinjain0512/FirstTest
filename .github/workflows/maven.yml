@@ -37,6 +37,7 @@ jobs:
         
     - name: 'Google auth 2'
       uses: google-github-actions/setup-gcloud@v1
+      id: auth
       with:
         service_account: "git-hub-action@logical-zephyr-423609-u7.iam.gserviceaccount.com"
         service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY_NEW }}
